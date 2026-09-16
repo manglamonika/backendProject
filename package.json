@@ -1,19 +1,11 @@
 {
-  "name": "chaibackend",
+  "name": "backendproject",
   "version": "1.0.0",
-  "description": "a basic app to deploy",
+  "description": "a backend at chai or code channel",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start":"npm start"
   },
-  "keywords": [
-    "node",
-    "chai"
-  ],
-  "author": "monika mangla",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1"
-  }
+  "author": "",
+  "license": "ISC"
 }
