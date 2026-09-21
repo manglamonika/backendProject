@@ -4,11 +4,23 @@
 
 import dotenv from 'dotenv';
 import connectDB from './db/db.js';
+import { app } from './app.js';
 
 dotenv.config({
     path:'./env'
 })
 connectDB()
+//bcz asyc function return promises so we use trn and catch method to resolve 
+.then(()=>{
+    app.on("error" ,(error)=>{console.log('error',error)
+        throw error})
+  app.listen(process.env.PORT ||8000,()=>{
+  console.log(`server is running on port ${process.env.PORT}`)
+  })
+ } )
+.catch( ()=>{
+console.log( "Mongodb connection failed !!!",err)
+})
 
 
 
